@@ -1,0 +1,26 @@
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+backend/chroma_data/
+
+# Node
+node_modules/
+frontend/.next/
+frontend/out/
+npm-debug.log*
+
+# DB / data
+postgres_data/
+*.sqlite3
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

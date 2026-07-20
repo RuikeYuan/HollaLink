@@ -1,0 +1,51 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-dutch_app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dutch_app}
+      POSTGRES_DB: ${POSTGRES_DB:-dutch_business_ai}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-dutch_app}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-dutch_app}:${POSTGRES_PASSWORD:-dutch_app}@postgres:5432/${POSTGRES_DB:-dutch_business_ai}
+      CHROMA_PERSIST_DIR: /app/chroma_data
+      KNOWLEDGE_DIR: /knowledge
+      CORS_ORIGINS: http://localhost:3000
+    volumes:
+      - chroma_data:/app/chroma_data
+      - ./knowledge:/knowledge:ro
+    ports:
+      - "8010:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_BASE_URL: http://localhost:8010
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:8010
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  chroma_data:
