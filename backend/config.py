@@ -1,3 +1,4 @@
+import os
 from functools import lru_cache
 from pathlib import Path
 
@@ -63,4 +64,14 @@ class Settings(BaseSettings):
 
 @lru_cache
 def get_settings() -> Settings:
-    return Settings()
+    settings = Settings()
+
+    # Pydantic 的环境变量自动推断在某些部署环境（例如 Railway）下可能因为
+    # .env 文件路径、大小写或别名等问题而没有按预期生效。这里直接、显式地
+    # 读取 DATABASE_URL 环境变量并覆盖默认值，避免应用误用硬编码的
+    # localhost 连接串去连接数据库。
+    env_database_url = os.environ.get("DATABASE_URL")
+    if env_database_url:
+        settings.database_url = env_database_url
+
+    return settings
