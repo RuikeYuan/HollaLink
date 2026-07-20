@@ -1,9 +1,21 @@
 from functools import lru_cache
+from pathlib import Path
+
+from pydantic import AliasChoices, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+# Resolve the .env file relative to this module so it is found regardless of
+# the working directory the app is started from (e.g. inside a container).
+_ENV_FILE = Path(__file__).resolve().parent / ".env"
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file="../.env", env_file_encoding="utf-8", extra="ignore")
+    model_config = SettingsConfigDict(
+        env_file=str(_ENV_FILE) if _ENV_FILE.exists() else None,
+        env_file_encoding="utf-8",
+        extra="ignore",
+        case_sensitive=False,
+    )
 
     llm_provider: str = "gemini"
 
@@ -17,7 +29,13 @@ class Settings(BaseSettings):
     groq_api_key: str = ""
     groq_chat_model: str = "llama-3.3-70b-versatile"
 
-    database_url: str = "postgresql+psycopg2://dutch_app:dutch_app@localhost:5432/dutch_business_ai"
+    # Explicitly bind to the "database_url" / "DATABASE_URL" environment
+    # variable (Railway injects the Postgres connection string this way) so
+    # it always takes precedence over the local-dev default below.
+    database_url: str = Field(
+        default="postgresql+psycopg2://dutch_app:dutch_app@localhost:5432/dutch_business_ai",
+        validation_alias=AliasChoices("database_url", "DATABASE_URL"),
+    )
 
     chroma_persist_dir: str = "./chroma_data"
 
