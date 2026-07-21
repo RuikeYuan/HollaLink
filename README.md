@@ -6,9 +6,9 @@
 
 ```
 dutch-business-ai (本仓库)/
-├── frontend/          Next.js 14 + TypeScript + Tailwind
-├── backend/           FastAPI + SQLAlchemy + Chroma RAG
-├── knowledge/         知识库 Markdown 种子内容（business/horeca/tax/immigration/location/cases）
+├── frontend/           Next.js 14 + TypeScript + Tailwind
+├── backend/
+│   └── knowledge/      知识库 Markdown 种子内容（business/horeca/tax/immigration/location/cases）
 ├── docker-compose.yml
 ├── .env.example
 └── README.md

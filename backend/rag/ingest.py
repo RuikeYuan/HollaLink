@@ -7,7 +7,7 @@ from models.document import Document
 from rag.chunking import chunk_text
 from rag.vector_store import upsert_chunks, delete_document_chunks
 
-_default_knowledge_dir = Path(__file__).resolve().parent.parent.parent / "knowledge"
+_default_knowledge_dir = Path(__file__).resolve().parent.parent / "knowledge"
 KNOWLEDGE_DIR = Path(os.environ.get("KNOWLEDGE_DIR", str(_default_knowledge_dir)))
 
 

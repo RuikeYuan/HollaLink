@@ -22,11 +22,9 @@ services:
     environment:
       DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-dutch_app}:${POSTGRES_PASSWORD:-dutch_app}@postgres:5432/${POSTGRES_DB:-dutch_business_ai}
       CHROMA_PERSIST_DIR: /app/chroma_data
-      KNOWLEDGE_DIR: /knowledge
       CORS_ORIGINS: http://localhost:3000
     volumes:
       - chroma_data:/app/chroma_data
-      - ./knowledge:/knowledge:ro
     ports:
       - "8010:8000"
     depends_on:
