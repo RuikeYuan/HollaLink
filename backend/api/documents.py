@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from api.deps import require_admin
 from database import get_db
 from models.document import Document
-from rag.ingest import extract_text_from_pdf, ingest_document
+from rag.ingest import extract_text_from_pdf, ingest_document, ingest_knowledge_base_folder
 from rag.vector_store import delete_document_chunks
 from schemas.document import KNOWLEDGE_CATEGORIES, DocumentOut
 
@@ -14,6 +14,12 @@ router = APIRouter(prefix="/api/admin/documents", tags=["admin-documents"], depe
 @router.get("", response_model=list[DocumentOut])
 def list_documents(db: Session = Depends(get_db)):
     return db.query(Document).order_by(Document.created_at.desc()).all()
+
+
+@router.post("/seed-knowledge-base", response_model=list[DocumentOut])
+def seed_knowledge_base(db: Session = Depends(get_db)):
+    """Re-ingest the bundled knowledge/ folder into Postgres + Chroma. Idempotent."""
+    return ingest_knowledge_base_folder(db)
 
 
 @router.post("/upload", response_model=DocumentOut)
