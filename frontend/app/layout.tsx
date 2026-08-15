@@ -18,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
             <nav className="flex gap-6 text-sm">
               <Link href="/" className="hover:text-slate-300">首页</Link>
+              <Link href="/roadmap" className="hover:text-slate-300">合规路线图</Link>
               <Link href="/chat" className="hover:text-slate-300">AI 咨询</Link>
               <Link href="/report" className="hover:text-slate-300">生成报告</Link>
               <Link href="/admin" className="hover:text-slate-300">管理后台</Link>

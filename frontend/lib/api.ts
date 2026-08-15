@@ -151,3 +151,58 @@ export async function adminListReports(adminToken: string) {
     headers: { "X-Admin-Token": adminToken },
   });
 }
+
+export interface RoadmapStepOut {
+  id: string;
+  step_key: string;
+  title: string;
+  category: string;
+  materials: string;
+  official_link: string;
+  estimated_days: string;
+  note: string;
+  priority: string;
+  status: "not_started" | "in_progress" | "done";
+  due_date: string | null;
+  sort_order: number;
+}
+
+export interface RoadmapOut {
+  id: string;
+  shop_type: string;
+  city: string;
+  company_type: string;
+  sells_food_beverage: boolean;
+  sells_alcohol: boolean;
+  has_staff: boolean;
+  needs_renovation: boolean;
+  created_at: string;
+  steps: RoadmapStepOut[];
+}
+
+export function createRoadmap(payload: {
+  shop_type: string;
+  city: string;
+  company_type: string;
+  sells_food_beverage: boolean;
+  sells_alcohol: boolean;
+  has_staff: boolean;
+  needs_renovation: boolean;
+  user_id?: string | null;
+}) {
+  return request<RoadmapOut>("/api/roadmap", {
+    method: "POST",
+    body: JSON.stringify(payload),
+  });
+}
+
+export function getRoadmap(profileId: string) {
+  return request<RoadmapOut>(`/api/roadmap/${profileId}`);
+}
+
+export function updateRoadmapStep(stepId: string, payload: { status?: string; due_date?: string | null }) {
+  return request<RoadmapStepOut>(`/api/roadmap/steps/${stepId}`, {
+    method: "PATCH",
+    body: JSON.stringify(payload),
+  });
+}

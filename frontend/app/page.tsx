@@ -2,6 +2,12 @@ import Link from "next/link";
 
 const SERVICES = [
   {
+    title: "开店合规路线图",
+    desc: "回答几个问题，2 分钟内获得个性化的开店合规清单（规则引擎生成，非 AI 生成，结果确定可靠），并可跟踪每一步的完成进度。",
+    href: "/roadmap",
+    cta: "生成路线图",
+  },
+  {
     title: "AI 开店顾问",
     desc: "输入行业、城市、预算，实时获得项目分析、成本方向和风险提示。",
     href: "/chat",

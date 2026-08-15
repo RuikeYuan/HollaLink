@@ -4,7 +4,7 @@ from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
 
-from api import admin, calculator, chat, documents, reports
+from api import admin, calculator, chat, documents, reports, roadmap
 from config import get_settings
 from rate_limit import limiter
 
@@ -29,6 +29,7 @@ app.include_router(calculator.router)
 app.include_router(reports.router)
 app.include_router(documents.router)
 app.include_router(admin.router)
+app.include_router(roadmap.router)
 
 
 @app.get("/api/health")
