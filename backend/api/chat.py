@@ -30,7 +30,7 @@ def _get_or_create_conversation(db: Session, conversation_id: str | None, user_i
             return conversation
 
     title = (first_message[:30] + "...") if len(first_message) > 30 else first_message
-    conversation = Conversation(user_id=user_id, title=title or "新的咨询")
+    conversation = Conversation(user_id=user_id, title=title or "New consultation")
     db.add(conversation)
     db.flush()
     return conversation
@@ -39,7 +39,7 @@ def _get_or_create_conversation(db: Session, conversation_id: str | None, user_i
 @router.post("/chat", response_model=ChatResponse)
 def send_chat_message(payload: ChatRequest, db: Session = Depends(get_db)):
     if not payload.message.strip():
-        raise HTTPException(status_code=400, detail="消息内容不能为空")
+        raise HTTPException(status_code=400, detail="Message content cannot be empty")
 
     user = _get_or_create_user(db, payload.user_id)
     conversation = _get_or_create_conversation(db, payload.conversation_id, user.id, payload.message)
@@ -73,5 +73,5 @@ def send_chat_message(payload: ChatRequest, db: Session = Depends(get_db)):
 def get_conversation(conversation_id: str, db: Session = Depends(get_db)):
     conversation = db.get(Conversation, conversation_id)
     if not conversation:
-        raise HTTPException(status_code=404, detail="会话不存在")
+        raise HTTPException(status_code=404, detail="Conversation not found")
     return conversation

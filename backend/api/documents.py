@@ -29,7 +29,7 @@ async def upload_document(
     db: Session = Depends(get_db),
 ):
     if category not in KNOWLEDGE_CATEGORIES:
-        raise HTTPException(status_code=400, detail=f"category 必须是 {KNOWLEDGE_CATEGORIES} 之一")
+        raise HTTPException(status_code=400, detail=f"category must be one of {KNOWLEDGE_CATEGORIES}")
 
     raw = await file.read()
     filename = file.filename or "untitled"
@@ -40,7 +40,7 @@ async def upload_document(
         content = raw.decode("utf-8", errors="ignore")
 
     if not content.strip():
-        raise HTTPException(status_code=400, detail="无法从文件中提取到文本内容")
+        raise HTTPException(status_code=400, detail="Could not extract any text content from the file")
 
     doc = ingest_document(db, filename, category, content)
     return doc
@@ -50,7 +50,7 @@ async def upload_document(
 def delete_document(document_id: str, db: Session = Depends(get_db)):
     doc = db.get(Document, document_id)
     if not doc:
-        raise HTTPException(status_code=404, detail="文档不存在")
+        raise HTTPException(status_code=404, detail="Document not found")
 
     delete_document_chunks(doc.id)
     db.delete(doc)

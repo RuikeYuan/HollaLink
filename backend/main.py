@@ -10,7 +10,7 @@ from rate_limit import limiter
 
 settings = get_settings()
 
-app = FastAPI(title="荷兰开店通 API", version="1.0.0")
+app = FastAPI(title="Dutch Business Navigator API", version="1.0.0")
 
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)

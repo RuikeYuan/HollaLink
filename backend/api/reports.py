@@ -23,7 +23,7 @@ def create_report(payload: ReportRequest, db: Session = Depends(get_db)):
         industry=payload.industry,
         city=payload.city,
         budget_eur=payload.budget_eur,
-        title=f"{payload.city} · {cost_data['industry']} 创业分析报告",
+        title=f"{payload.city} · {cost_data['industry']} Business Analysis Report",
         content_markdown=markdown,
     )
     db.add(report)
@@ -36,7 +36,7 @@ def create_report(payload: ReportRequest, db: Session = Depends(get_db)):
 def get_report(report_id: str, db: Session = Depends(get_db)):
     report = db.get(Report, report_id)
     if not report:
-        raise HTTPException(status_code=404, detail="报告不存在")
+        raise HTTPException(status_code=404, detail="Report not found")
     return report
 
 

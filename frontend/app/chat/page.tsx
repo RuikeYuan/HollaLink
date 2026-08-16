@@ -12,17 +12,17 @@ interface DisplayMessage {
 }
 
 const SUGGESTIONS = [
-  "我想在鹿特丹开一家火锅店，需要多少钱？",
-  "阿姆斯特丹和海牙哪个更适合开奶茶店？",
-  "在荷兰开餐馆需要哪些许可证？",
-  "没有荷兰身份，可以先开公司吗？",
+  "I want to open a hotpot restaurant in Rotterdam — how much would that cost?",
+  "Amsterdam or Den Haag — which is better for a bubble tea shop?",
+  "What permits do I need to open a restaurant in the Netherlands?",
+  "Can I start a company before I have Dutch residency?",
 ];
 
 export default function ChatPage() {
   const [messages, setMessages] = useState<DisplayMessage[]>([
     {
       role: "assistant",
-      content: "你好，我是荷兰开店通的 AI 商业顾问。可以直接告诉我你想做的行业、意向城市和大致预算，我会帮你分析可行性、成本和风险。",
+      content: "Hi, I'm the Dutch Business Navigator's AI business advisor. Tell me the industry you're considering, your target city, and roughly your budget, and I'll help you assess feasibility, cost, and risk.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -59,7 +59,7 @@ export default function ChatPage() {
 
       setMessages((prev) => [...prev, { role: "assistant", content: res.reply.content, sources: res.sources }]);
     } catch (e) {
-      const msg = e instanceof ApiError ? e.message : "网络错误，请稍后重试";
+      const msg = e instanceof ApiError ? e.message : "Network error. Please try again shortly.";
       setError(msg);
     } finally {
       setLoading(false);
@@ -68,7 +68,7 @@ export default function ChatPage() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 flex flex-col h-[calc(100vh-56px)]">
-      <h1 className="text-xl font-bold text-navy-900 mb-4">AI 开店顾问</h1>
+      <h1 className="text-xl font-bold text-navy-900 mb-4">AI Business Advisor</h1>
 
       <div className="flex-1 overflow-y-auto space-y-4 pb-4">
         {messages.map((m, i) => (
@@ -87,13 +87,13 @@ export default function ChatPage() {
               )}
               {m.sources && m.sources.length > 0 && (
                 <div className="mt-2 pt-2 border-t border-slate-200 text-xs text-slate-400">
-                  参考资料：{m.sources.join("、")}
+                  Sources: {m.sources.join(", ")}
                 </div>
               )}
             </div>
           </div>
         ))}
-        {loading && <div className="text-sm text-slate-400">顾问正在思考…</div>}
+        {loading && <div className="text-sm text-slate-400">The advisor is thinking…</div>}
         {error && <div className="text-sm text-red-600">{error}</div>}
         <div ref={bottomRef} />
       </div>
@@ -117,7 +117,7 @@ export default function ChatPage() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSend()}
-          placeholder="输入你的问题，例如：我想在乌得勒支开一家美容店……"
+          placeholder="Type your question, e.g. I want to open a beauty salon in Utrecht…"
           className="flex-1 border border-slate-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-navy-700"
         />
         <button
@@ -125,7 +125,7 @@ export default function ChatPage() {
           disabled={loading}
           className="bg-navy-900 text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-navy-800 disabled:opacity-50"
         >
-          发送
+          Send
         </button>
       </div>
     </div>

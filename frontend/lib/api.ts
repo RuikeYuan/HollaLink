@@ -19,7 +19,7 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
 
   if (!res.ok) {
     const body = await res.json().catch(() => ({ detail: res.statusText }));
-    throw new ApiError(res.status, body.detail || "请求失败，请稍后重试");
+    throw new ApiError(res.status, body.detail || "Request failed. Please try again shortly.");
   }
 
   return res.json() as Promise<T>;
@@ -120,7 +120,7 @@ export async function adminUploadDocument(adminToken: string, category: string, 
   });
   if (!res.ok) {
     const body = await res.json().catch(() => ({ detail: res.statusText }));
-    throw new ApiError(res.status, body.detail || "上传失败");
+    throw new ApiError(res.status, body.detail || "Upload failed");
   }
   return res.json() as Promise<DocumentOut>;
 }

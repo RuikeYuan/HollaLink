@@ -14,12 +14,12 @@ import {
 } from "@/lib/api";
 
 const CATEGORIES = [
-  { value: "business", label: "创业基础" },
-  { value: "horeca", label: "餐饮行业" },
-  { value: "tax", label: "税务" },
-  { value: "immigration", label: "创业签证" },
-  { value: "location", label: "城市分析" },
-  { value: "cases", label: "华人案例" },
+  { value: "business", label: "Business basics" },
+  { value: "horeca", label: "Hospitality industry" },
+  { value: "tax", label: "Tax" },
+  { value: "immigration", label: "Business/startup visas" },
+  { value: "location", label: "City analysis" },
+  { value: "cases", label: "Case studies" },
 ];
 
 type Tab = "documents" | "conversations" | "reports";
@@ -66,9 +66,9 @@ export default function AdminPage() {
     if (e instanceof ApiError && e.status === 401) {
       setAuthed(false);
       sessionStorage.removeItem("dbn_admin_token");
-      setError("管理员凭证无效，请重新输入");
+      setError("Invalid admin credentials — please sign in again");
     } else {
-      setError(e instanceof ApiError ? e.message : "请求失败");
+      setError(e instanceof ApiError ? e.message : "Request failed");
     }
   }
 
@@ -104,17 +104,17 @@ export default function AdminPage() {
   if (!authed) {
     return (
       <div className="max-w-sm mx-auto px-4 py-20">
-        <h1 className="text-xl font-bold text-navy-900 mb-4">管理后台登录</h1>
+        <h1 className="text-xl font-bold text-navy-900 mb-4">Admin Sign In</h1>
         <input
           type="password"
           value={token}
           onChange={(e) => setToken(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleLogin()}
-          placeholder="输入管理员 Token（对应 .env 的 ADMIN_TOKEN）"
+          placeholder="Enter the admin token (the ADMIN_TOKEN from .env)"
           className="w-full border border-slate-300 rounded-md px-3 py-2 text-sm mb-3"
         />
         <button onClick={handleLogin} className="w-full bg-navy-900 text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-navy-800">
-          登录
+          Sign in
         </button>
         {error && <div className="text-sm text-red-600 mt-3">{error}</div>}
       </div>
@@ -123,7 +123,7 @@ export default function AdminPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
-      <h1 className="text-xl font-bold text-navy-900 mb-4">管理后台</h1>
+      <h1 className="text-xl font-bold text-navy-900 mb-4">Admin</h1>
 
       <div className="flex gap-4 border-b border-slate-200 mb-6 text-sm">
         {(["documents", "conversations", "reports"] as Tab[]).map((t) => (
@@ -132,7 +132,7 @@ export default function AdminPage() {
             onClick={() => setTab(t)}
             className={`pb-2 px-1 ${tab === t ? "border-b-2 border-navy-900 text-navy-900 font-medium" : "text-slate-500"}`}
           >
-            {t === "documents" ? "知识库文档" : t === "conversations" ? "用户咨询记录" : "已生成报告"}
+            {t === "documents" ? "Knowledge base documents" : t === "conversations" ? "User consultations" : "Generated reports"}
           </button>
         ))}
       </div>
@@ -143,13 +143,13 @@ export default function AdminPage() {
         <div>
           <div className="bg-white border border-slate-200 rounded-lg p-5 mb-6 flex flex-wrap items-end gap-3">
             <div>
-              <label className="block text-xs text-slate-500 mb-1">知识分类</label>
+              <label className="block text-xs text-slate-500 mb-1">Category</label>
               <select value={uploadCategory} onChange={(e) => setUploadCategory(e.target.value)} className="border border-slate-300 rounded-md px-3 py-2 text-sm">
                 {CATEGORIES.map((c) => <option key={c.value} value={c.value}>{c.label}</option>)}
               </select>
             </div>
             <div>
-              <label className="block text-xs text-slate-500 mb-1">文件（PDF / TXT / Markdown）</label>
+              <label className="block text-xs text-slate-500 mb-1">File (PDF / TXT / Markdown)</label>
               <input
                 type="file"
                 accept=".pdf,.txt,.md"
@@ -158,17 +158,17 @@ export default function AdminPage() {
               />
             </div>
             <button onClick={handleUpload} disabled={!uploadFile || uploading} className="bg-navy-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-navy-800 disabled:opacity-50">
-              {uploading ? "上传中…" : "上传并写入知识库"}
+              {uploading ? "Uploading…" : "Upload to knowledge base"}
             </button>
           </div>
 
           <table className="w-full text-sm bg-white border border-slate-200 rounded-lg overflow-hidden">
             <thead className="bg-slate-50 text-slate-500 text-xs">
               <tr>
-                <th className="text-left px-4 py-2">文件名</th>
-                <th className="text-left px-4 py-2">分类</th>
-                <th className="text-left px-4 py-2">片段数</th>
-                <th className="text-left px-4 py-2">上传时间</th>
+                <th className="text-left px-4 py-2">Filename</th>
+                <th className="text-left px-4 py-2">Category</th>
+                <th className="text-left px-4 py-2">Chunks</th>
+                <th className="text-left px-4 py-2">Uploaded</th>
                 <th className="px-4 py-2"></th>
               </tr>
             </thead>
@@ -180,12 +180,12 @@ export default function AdminPage() {
                   <td className="px-4 py-2">{d.chunk_count}</td>
                   <td className="px-4 py-2 text-slate-400">{new Date(d.created_at).toLocaleString()}</td>
                   <td className="px-4 py-2 text-right">
-                    <button onClick={() => handleDelete(d.id)} className="text-red-600 hover:underline text-xs">删除</button>
+                    <button onClick={() => handleDelete(d.id)} className="text-red-600 hover:underline text-xs">Delete</button>
                   </td>
                 </tr>
               ))}
               {documents.length === 0 && (
-                <tr><td colSpan={5} className="px-4 py-6 text-center text-slate-400">暂无文档</td></tr>
+                <tr><td colSpan={5} className="px-4 py-6 text-center text-slate-400">No documents yet</td></tr>
               )}
             </tbody>
           </table>
@@ -197,13 +197,13 @@ export default function AdminPage() {
           {conversations.map((c) => (
             <details key={c.id} className="bg-white border border-slate-200 rounded-lg p-4">
               <summary className="cursor-pointer font-medium text-navy-900 text-sm">
-                {c.title} <span className="text-slate-400 font-normal">· {new Date(c.created_at).toLocaleString()} · {c.messages.length} 条消息</span>
+                {c.title} <span className="text-slate-400 font-normal">· {new Date(c.created_at).toLocaleString()} · {c.messages.length} messages</span>
               </summary>
               <div className="mt-3 space-y-2">
                 {c.messages.map((m) => (
                   <div key={m.id} className="text-sm">
                     <span className={`font-medium ${m.role === "user" ? "text-navy-800" : "text-emerald-700"}`}>
-                      {m.role === "user" ? "用户" : "AI"}：
+                      {m.role === "user" ? "User" : "AI"}:
                     </span>
                     <span className="text-slate-700 whitespace-pre-wrap">{m.content}</span>
                   </div>
@@ -211,7 +211,7 @@ export default function AdminPage() {
               </div>
             </details>
           ))}
-          {conversations.length === 0 && <div className="text-slate-400 text-sm">暂无咨询记录</div>}
+          {conversations.length === 0 && <div className="text-slate-400 text-sm">No consultations yet</div>}
         </div>
       )}
 
@@ -225,7 +225,7 @@ export default function AdminPage() {
               <pre className="mt-3 text-xs whitespace-pre-wrap text-slate-600">{r.content_markdown}</pre>
             </details>
           ))}
-          {reports.length === 0 && <div className="text-slate-400 text-sm">暂无报告</div>}
+          {reports.length === 0 && <div className="text-slate-400 text-sm">No reports yet</div>}
         </div>
       )}
     </div>

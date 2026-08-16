@@ -9,7 +9,7 @@ class LLMNotConfiguredError(RuntimeError):
 
 def _gemini_client():
     if not settings.gemini_api_key:
-        raise LLMNotConfiguredError("GEMINI_API_KEY 未配置，请在 .env 中设置后重启服务。")
+        raise LLMNotConfiguredError("GEMINI_API_KEY is not configured. Set it in .env and restart the service.")
     from google import genai
 
     return genai.Client(api_key=settings.gemini_api_key)
@@ -43,12 +43,12 @@ def chat_completion(system_prompt: str, history: list[dict], user_message: str) 
     if provider in ("openai", "groq"):
         if provider == "openai":
             if not settings.openai_api_key:
-                raise LLMNotConfiguredError("OPENAI_API_KEY 未配置，请在 .env 中设置后重启服务。")
+                raise LLMNotConfiguredError("OPENAI_API_KEY is not configured. Set it in .env and restart the service.")
             client = _openai_compatible_client(settings.openai_api_key)
             model = settings.openai_chat_model
         else:
             if not settings.groq_api_key:
-                raise LLMNotConfiguredError("GROQ_API_KEY 未配置，请在 .env 中设置后重启服务。")
+                raise LLMNotConfiguredError("GROQ_API_KEY is not configured. Set it in .env and restart the service.")
             client = _openai_compatible_client(settings.groq_api_key, base_url="https://api.groq.com/openai/v1")
             model = settings.groq_chat_model
 
@@ -60,7 +60,7 @@ def chat_completion(system_prompt: str, history: list[dict], user_message: str) 
         completion = client.chat.completions.create(model=model, messages=messages)
         return completion.choices[0].message.content or ""
 
-    raise LLMNotConfiguredError(f"未知的 LLM_PROVIDER: {provider}")
+    raise LLMNotConfiguredError(f"Unknown LLM_PROVIDER: {provider}")
 
 
 def embed_text(text: str) -> list[float]:
@@ -74,4 +74,4 @@ def embed_text(text: str) -> list[float]:
         result = client.embeddings.create(model="text-embedding-3-small", input=text)
         return list(result.data[0].embedding)
 
-    raise LLMNotConfiguredError("未配置任何支持 embedding 的 API Key（GEMINI_API_KEY 或 OPENAI_API_KEY）。")
+    raise LLMNotConfiguredError("No embedding-capable API key is configured (GEMINI_API_KEY or OPENAI_API_KEY).")

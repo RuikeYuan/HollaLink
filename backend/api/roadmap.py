@@ -53,7 +53,7 @@ def get_roadmap(profile_id: str, db: Session = Depends(get_db)):
         .first()
     )
     if not profile:
-        raise HTTPException(status_code=404, detail="未找到该合规路线图")
+        raise HTTPException(status_code=404, detail="Roadmap not found")
     return profile
 
 
@@ -61,11 +61,11 @@ def get_roadmap(profile_id: str, db: Session = Depends(get_db)):
 def update_roadmap_step(step_id: str, payload: RoadmapStepUpdate, db: Session = Depends(get_db)):
     step = db.get(RoadmapStep, step_id)
     if not step:
-        raise HTTPException(status_code=404, detail="未找到该任务")
+        raise HTTPException(status_code=404, detail="Task not found")
 
     if payload.status is not None:
         if payload.status not in VALID_STATUSES:
-            raise HTTPException(status_code=400, detail=f"status 必须是 {', '.join(VALID_STATUSES)} 之一")
+            raise HTTPException(status_code=400, detail=f"status must be one of {', '.join(VALID_STATUSES)}")
         step.status = payload.status
 
     if "due_date" in payload.model_fields_set:
