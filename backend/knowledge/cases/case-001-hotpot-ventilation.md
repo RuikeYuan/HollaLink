@@ -1,29 +1,29 @@
-# 案例库：荷兰华人餐饮业真实现状（2026 年数据，含真实来源）
+# Case Library: The Real State of the Chinese Restaurant Industry in the Netherlands (2026 data, with real sources)
 
-> 说明：以下内容基于公开报道整理，标注来源；不是杜撰的单一案例，而是荷兰华人餐饮业当前真实、可查证的行业状况，供顾问 Agent 在回答"荷兰开餐馆怎么样""值不值得"这类问题时引用。
+> Note: the content below is compiled from public reporting, with sources cited. It is not a single fabricated case study, but a real, verifiable picture of the current state of the Chinese restaurant industry in the Netherlands, for the advisor agent to cite when answering questions like "is opening a restaurant in the Netherlands worth it."
 
-## 华人中餐馆数量持续下降，但背后原因不是"生意不好"这么简单
-- 荷兰传统中餐馆数量从 2008 年的约 2,123 家，下降到近年约 1,600-1,700 家左右，行业整体处于收缩状态。
-- **核心原因不是市场消失，而是"后继无人"（succession crisis）**：第二代、第三代华裔普遍不愿意接手父辈的餐馆，很多老一辈餐馆主到了退休年龄，找不到子女或买家接手，最终选择关店或转让，而不是因为经营失败关店。
-- **这对新创业者是一个真实的机会点**：与其从零开始找店、装修、办证，"接手一家正在转让的中餐馆"可能是更现实的入场路径——现成的排烟系统、现成的营业执照类型参考、现成的固定客源，但也需要仔细核实转让原因和现有设施是否真的合规（见 [[business/zoning-bestemmingsplan.md|商业用途与土地规划]]），不能假设"能开到今天就一定合规"。
+## The number of Chinese restaurants keeps declining, but the reason isn't simply "bad business"
+- The number of traditional Chinese restaurants in the Netherlands has fallen from roughly 2,123 in 2008 to around 1,600-1,700 in recent years — the industry as a whole is contracting.
+- **The core reason isn't that the market has disappeared, but a "succession crisis"**: second- and third-generation Chinese-Dutch descendants are broadly unwilling to take over their parents' restaurants. Many first-generation owners are reaching retirement age and can't find children or buyers to take over, ultimately closing or transferring the business rather than closing due to poor performance.
+- **This is a genuine opportunity for new entrepreneurs**: rather than starting from scratch — finding a space, renovating, obtaining permits — "taking over a restaurant that's being transferred" may be a more realistic entry path, offering an existing extraction system, an existing business-license type as reference, and an existing customer base. That said, you still need to carefully verify the reason for the transfer and whether the existing facilities are actually compliant (see [[business/zoning-bestemmingsplan.md|zoning and business use]]) — you can't assume "it's been open this long, so it must be compliant."
 
-## 真实的成本压力（2026 年，多家真实餐厅访谈数据）
-以下是荷兰中餐/亚洲餐饮从业者的真实反馈（中荷商报 2026 年访谈）：
+## Real cost pressure (2026, from interviews with actual restaurants)
+The following is real feedback from Chinese/Asian restaurant operators in the Netherlands (interviews by China Times NL, 2026):
 
-- **能源成本**：多家受访餐厅反映电费/燃气费上涨了 **3-4 倍甚至更多**（未精确核算前的经营者主观感受，但方向一致）。
-- **食材采购成本**：涨幅在 **30%-70%** 之间。具体例子：
-  - 某韩式烤肉餐厅（Kogi House）：鸭胸肉从 €8.90/公斤涨到 €18/公斤；羊排从 €9.50/公斤涨到 €17.50/公斤，接近翻倍。
-  - 某西安面馆：面粉和食用油价格翻倍，直接压缩利润空间，即使客流量很大，实际利润也没有相应增长。
-- **应对策略分化**：有的餐厅涨价（如某餐厅涨价约 7%，明显低于成本涨幅，属于"部分转嫁成本"）；也有餐厅（如某奶茶店）主动选择不涨价，优先保住客源而不是短期利润。
-- **人力短缺是普遍瓶颈**：某海鲜餐厅（Wowcrab）反映新开分店"急需招人"，能不能招到员工直接决定了新店能否如期开业——这提示创业者，招聘可行性应该作为独立的可行性评估项，而不只是走完法律合规手续就够了。
+- **Energy costs**: multiple restaurants interviewed reported electricity/gas bills rising **3-4x or more** (a subjective impression from operators rather than a precisely audited figure, but the direction is consistent).
+- **Ingredient sourcing costs**: increases of between **30%-70%**. Specific examples:
+  - A Korean BBQ restaurant (Kogi House): duck breast rose from €8.90/kg to €18/kg; lamb chops rose from €9.50/kg to €17.50/kg, nearly doubling.
+  - A Xi'an noodle restaurant: flour and cooking oil prices doubled, directly squeezing margins — even with strong foot traffic, actual profit didn't grow proportionally.
+- **Divergent coping strategies**: some restaurants raised prices (e.g. one restaurant raised prices by about 7%, well below its cost increase — a partial cost pass-through); others (e.g. a bubble tea shop) deliberately chose not to raise prices, prioritizing keeping customers over short-term profit.
+- **Labor shortage is a widespread bottleneck**: a seafood restaurant (Wowcrab) reported urgently needing staff for a new branch — whether they can hire staff directly determines whether the new location can open on schedule. This suggests entrepreneurs should treat hiring feasibility as an independent feasibility criterion, not just a legal-compliance checkbox.
 
-## 给顾问 Agent 的引用建议
-1. 回答"荷兰开中餐馆现在还行不行"这类问题时，应该提到：**行业整体在收缩，但收缩的主因是"接班问题"而非"不赚钱"**，这跟"这个赛道没前途"是两个不同的结论，不要简单混为一谈。
-2. 遇到用户问成本预算时，应提醒：**近年能源和食材成本涨幅明显（30%-70%区间），旧的成本经验数字可能已经过时**，建议实地询问同类型现有店铺的真实进货价，而不是照搬几年前的预算参考。
-3. 遇到用户问"要不要接手转让的店"，应正面提及"接手转让店"是一个真实存在、甚至可能更划算的路径（对应荷兰中餐馆普遍后继无人的现状），但同样要提醒核实现有设施（尤其排烟系统，见 [[horeca/horeca-licenses.md|餐饮许可清单]]）是否真的达标，不能因为"店开了很多年"就默认合规。
-4. 招聘可行性建议纳入前期评估，尤其是计划开分店或扩张时。
+## Citation guidance for the advisor agent
+1. When answering "is it still worth opening a Chinese restaurant in the Netherlands," mention that **the industry as a whole is contracting, but mainly due to a succession problem rather than lack of profitability** — this is a different conclusion from "this sector has no future," and the two shouldn't be conflated.
+2. When a user asks about cost budgeting, note that **energy and ingredient costs have risen significantly in recent years (30%-70% range), so older cost assumptions may be outdated** — recommend asking similar existing shops about their actual current purchase prices rather than relying on a budget reference from a few years ago.
+3. When a user asks about "should I take over a transferring business," proactively mention that this is a real and potentially advantageous path (given the widespread succession-crisis in Dutch Chinese restaurants), but equally stress verifying that existing facilities (especially the extraction system — see [[horeca/horeca-licenses.md|hospitality permit checklist]]) genuinely meet current standards — don't assume compliance just because "the shop has been open for years."
+4. Hiring feasibility should be part of the early-stage assessment, especially for anyone planning to open multiple locations or expand.
 
-## 信息来源
-- 中荷商报 China Times《荷兰中餐厅现状: 活儿多, 钱少赚? 成本涨, 利润跌?》（chinatimes.nl，2026 年真实经营者访谈）
-- 中国新闻网《华裔后代不愿接盘 荷兰中餐馆数量急剧下降》（chinanews.com.cn）
-- 海那边海外社区、搜狐等多篇关于荷兰中餐馆数量变化的报道交叉印证
+## Sources
+- China Times NL, "The Real State of Dutch Chinese Restaurants: More Work, Less Money? Rising Costs, Falling Profits?" (chinatimes.nl, 2026 interviews with real operators)
+- China News, "Descendants Unwilling to Take Over — Number of Dutch Chinese Restaurants Falls Sharply" (chinanews.com.cn)
+- Cross-referenced with multiple reports from Haitang/Overseas Chinese community sites and Sohu on the changing numbers of Dutch Chinese restaurants

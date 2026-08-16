@@ -1,19 +1,19 @@
-# 商业用途与土地规划（Bestemmingsplan）
+# Zoning and Permitted Use (Bestemmingsplan)
 
-## 为什么这是最容易被忽视的风险
-每块地/每栋建筑在市政的"bestemmingsplan"（土地使用规划）中都有指定用途，例如"horeca（餐饮）"、"detailhandel（零售）"、"kantoor（办公）"、"wonen（居住）"。如果你租下的商铺规划用途与你要经营的业态不符，即使签了租约、装修完成，市政仍可以要求停业整改，押金和装修投入可能血本无归。
+## Why this is the most commonly overlooked risk
+Every plot of land/building has a designated use in the municipality's "bestemmingsplan" (zoning plan) — for example "horeca" (hospitality), "detailhandel" (retail), "kantoor" (office), or "wonen" (residential). If the zoned use of the space you've leased doesn't match the business you intend to run, the municipality can still order a shutdown and remediation even after you've signed the lease and completed renovations — potentially wiping out your deposit and renovation investment.
 
-## 案例参考
-参见 [[case-001-hotpot-ventilation]]：火锅店未确认商用排烟系统合规导致追加投入。类似地，"住宅改商用"、"零售改餐饮"都属于用途变更（omgevingsvergunning voor afwijken bestemmingsplan），需要单独向市政申请，审批周期可能长达 8-26 周，且不保证通过。
+## Case reference
+See [[case-001-hotpot-ventilation]]: a hotpot restaurant that didn't verify commercial extraction-system compliance ended up needing additional investment. Similarly, "converting residential to commercial" or "converting retail to hospitality" both count as a change of use (omgevingsvergunning voor afwijken bestemmingsplan) and require a separate application to the municipality — approval can take as long as 8-26 weeks, with no guarantee of success.
 
-## 签约前必须核实的 5 件事
-1. 通过市政网站或 ruimtelijkeplannen.nl 查询该地址当前 bestemmingsplan 用途。
-2. 若用途不符，向市政咨询变更可行性和大致周期，**不要在拿到书面确认前签长期租约或支付高额装修**。
-3. 确认是否需要单独的餐饮排烟/排污许可（horeca 特有，见 [[horeca-licenses]]）。
-4. 确认建筑是否有监听保护（monumentenstatus），老城区商铺常见，会限制外立面/招牌改动。
-5. 要求房东/中介提供"该地址此前经营业态"的历史记录，判断改造成本。
+## 5 things to verify before signing
+1. Check the current bestemmingsplan designation for the address via the municipality's website or ruimtelijkeplannen.nl.
+2. If the designated use doesn't match, ask the municipality about the feasibility and rough timeline for a change — **don't sign a long-term lease or pay for expensive renovations before getting written confirmation**.
+3. Confirm whether a separate food-service extraction/drainage permit is required (specific to horeca — see [[horeca-licenses]]).
+4. Confirm whether the building has heritage protection (monumentenstatus), which is common in old city centers and restricts facade/signage changes.
+5. Ask the landlord/broker for a record of "what business previously operated at this address" to help judge renovation costs.
 
-## 给顾问的建议模板
-当用户问"这个店可以转让/租下来做 XX 吗"，标准回答应包含：
-- 先查 bestemmingsplan，再谈价格和装修方案。
-- 明确告知：合同里加入"以获得必要许可为生效条件"（ontbindende voorwaarde）的保护性条款，可在许可拿不到时无损解约。
+## Suggested response template for the advisor
+When a user asks "can I take over/lease this shop to do XX," the standard answer should include:
+- Check the bestemmingsplan first, before discussing price and renovation plans.
+- Explicitly advise adding a protective clause to the contract making it conditional on obtaining the necessary permits (ontbindende voorwaarde), which allows the tenant to exit without penalty if the permit isn't granted.

@@ -16,15 +16,15 @@ def main():
             demo_user = User(email="demo@dutchbusinessnavigator.com", name="Demo User")
             db.add(demo_user)
             db.commit()
-            print(f"已创建演示用户，user_id = {demo_user.id}")
+            print(f"Created demo user, user_id = {demo_user.id}")
         else:
-            print(f"演示用户已存在，user_id = {demo_user.id}")
+            print(f"Demo user already exists, user_id = {demo_user.id}")
 
-        print("正在导入 knowledge/ 目录下的知识库文档并写入向量数据库……")
+        print("Importing knowledge base documents from knowledge/ and writing them to the vector store...")
         docs = ingest_knowledge_base_folder(db)
-        print(f"已导入 {len(docs)} 篇知识库文档：")
+        print(f"Imported {len(docs)} knowledge base documents:")
         for doc in docs:
-            print(f"  - [{doc.category}] {doc.filename} ({doc.chunk_count} 个片段)")
+            print(f"  - [{doc.category}] {doc.filename} ({doc.chunk_count} chunks)")
     finally:
         db.close()
 

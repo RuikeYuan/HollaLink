@@ -1,44 +1,44 @@
-# 餐饮行业许可清单（Horeca Vergunningen，2026 年数据）
+# Hospitality Industry Permit Checklist (Horeca Vergunningen, 2026 data)
 
-开一家餐馆/奶茶店/火锅店在荷兰通常需要以下许可和登记，缺一不可：
+Opening a restaurant/bubble tea shop/hotpot restaurant in the Netherlands generally requires all of the following permits and registrations:
 
-## 1. KVK 商业登记
-见 [[business/kvk-registration.md|KVK 注册基础]]。
+## 1. KVK business registration
+See [[business/kvk-registration.md|KVK registration basics]].
 
-## 2. Alcoholwet 许可（酒精饮品经营许可，原名 Drank- en Horecawet）
-**注意名称变化**：该法律已从"Drank- en Horecawet"更名为"**Alcoholwet**"。如果打算销售酒精饮料（包括啤酒配餐），需要向市政申请 Alcoholwetvergunning，2026 年的申请费为 **€486.30**，市政会在 8 周内书面答复。条件包括：
-- 至少一名"负责人"（leidinggevende）必须年满 **21 周岁**，持有**无犯罪记录声明（VOG）**，并持有 **SVH 社会卫生证书（Verklaring Sociale Hygiëne）**。所有负责人（包括业主本人、日常管理者）都需要登记在许可证的附录里。
-- 市政会做 **Bibob 审查**（诚信/资金来源审查）——很多中国投资者不熟悉但必须认真准备的环节，需准备清晰的资金来源证明（银行流水、投资协议等），Bibob 问卷不完整会导致申请材料被视为不完整。
+## 2. Alcoholwet license (alcohol sales license, formerly Drank- en Horecawet)
+**Note the name change**: this law was renamed from "Drank- en Horecawet" to "**Alcoholwet**." If you plan to sell alcoholic beverages (including beer served with food), you need to apply to the municipality for an Alcoholwetvergunning. The 2026 application fee is **€486.30**, and the municipality responds in writing within 8 weeks. Conditions include:
+- At least one "person in charge" (leidinggevende) must be at least **21 years old**, hold a **certificate of good conduct (VOG)**, and hold an **SVH Social Hygiene Certificate (Verklaring Sociale Hygiëne)**. All persons in charge (including the owner and day-to-day managers) must be listed in the license's appendix.
+- The municipality conducts a **Bibob screening** (an integrity/source-of-funds review) — a step many Chinese investors are unfamiliar with but must prepare for carefully, with clear proof of the source of funds (bank statements, investment agreements, etc.); an incomplete Bibob questionnaire will cause the application to be treated as incomplete.
 
-奶茶店/无酒精餐饮通常不需要此许可，但仍需符合食品安全和排烟等要求。
+Bubble tea shops/alcohol-free food businesses generally don't need this license, but still need to meet food safety and extraction requirements.
 
-## 3. 食品安全登记（NVWA / HACCP）
-**2026 年 3 月起的重要变化**：NVWA 食品安全登记已迁移到新的数字系统 **MijnNVWA**，已有登记的门店也需要重新在 MijnNVWA 完成注册。所有经营食品的门店必须：
-- 通过 MijnNVWA 向 NVWA（荷兰食品和消费品安全局）登记。
-- 建立并留存 HACCP 食品安全管理体系文档——大多数餐饮从业者直接采用行业协会 **KHN 卫生守则（hygiënecode）**，该守则已获 NVWA 认可，采用它即视为履行了 HACCP 食品安全计划的法定义务，不需要从零自建体系。
-- 接受不定期突击检查，问题包括存储温度记录、员工健康证明、过敏原标识（欧盟 14 种法定过敏原需在菜单标注）。
+## 3. Food safety registration (NVWA / HACCP)
+**Important change effective March 2026**: NVWA food safety registration has moved to a new digital system, **MijnNVWA** — businesses that were already registered also need to re-register via MijnNVWA. Every food business must:
+- Register with NVWA (the Netherlands Food and Consumer Product Safety Authority) via MijnNVWA.
+- Establish and retain HACCP food safety management documentation — most restaurant operators simply adopt the industry association's **KHN Hygiene Code (hygiënecode)**, which is recognized by NVWA; adopting it is considered fulfilling the statutory HACCP food safety plan obligation, so there's no need to build a system from scratch.
+- Be subject to unannounced spot inspections covering storage temperature logs, staff health certificates, and allergen labeling (the EU's 14 legally recognized allergens must be marked on the menu).
 
-## 4. 排烟与环境合规（Activiteitenbesluit）
-餐饮（尤其是中餐、火锅、烧烤、wok 爆炒类高油烟业态）常见的隐藏成本，也是最容易被低估预算的环节：
-- 自 2021 年起，通风相关的具体要求变化较大，多数餐饮企业属于《活动设施法令》（Activiteitenbesluit Milieubeheer）下的"**轻度监管（light regime）**"——不需要单独申请环境许可，只需遵守通用规则（例如异味/噪音不能对邻居造成过度滋扰）。
-- 但**高油烟/高异味业态（火锅、wok、烧烤）实际排放超出轻度监管阈值时，可能需要额外的排烟净化设备（如电磁/静电油烟净化器）或触发市政环境部门的正式复查**。
-- **真实报价区间**（2026 年市场行情）：一套完整的商用厨房排烟系统（含烟罩、管道、风机、控制系统）安装费用约 **€7,500–€20,000**，长管道走线或需要屋顶穿孔的情况费用会更高；电磁油烟净化设备每月维护费约 **€50**（不含 BTW）。整体厨房设备+不锈钢台面+排烟安装，粗略按 **每平米 €1,000–€2,000** 估算（不含土建/软装）。
-- 排烟出口位置、噪音（风机）也可能被邻居投诉并触发市政复查，这属于持续性合规风险，不是一次性投入就能永久免除的义务。
+## 4. Extraction and environmental compliance (Activiteitenbesluit)
+A commonly underestimated hidden cost for hospitality businesses (especially high-fume formats like Chinese cuisine, hotpot, BBQ, and wok cooking), and one of the areas where budgets are most often underestimated:
+- Since 2021, ventilation-related requirements have changed significantly. Most hospitality businesses fall under the "**light regime**" of the Activities Decree (Activiteitenbesluit Milieubeheer) — no separate environmental permit is needed, just compliance with general rules (e.g. odor/noise must not cause excessive nuisance to neighbors).
+- However, **high-fume/high-odor formats (hotpot, wok, BBQ) whose actual emissions exceed the light-regime threshold may need additional extraction/purification equipment (e.g. electrostatic precipitators) or may trigger a formal review by the municipal environmental department**.
+- **Real-world pricing (2026 market rates)**: a complete commercial kitchen extraction system (hood, ducting, fan, control system) typically costs **€7,500–€20,000** to install — longer duct runs or roof penetrations cost more; electrostatic grease-filtration equipment costs roughly **€50/month** to maintain (excl. VAT). A rough estimate for the full kitchen equipment + stainless steel counters + extraction installation is **€1,000–€2,000 per square meter** (excluding structural work/interior finishing).
+- The location of the extraction outlet and fan noise can also draw neighbor complaints and trigger a municipal review — this is an ongoing compliance risk, not an obligation that's permanently discharged with a one-time investment.
 
-## 5. 招牌/外摆许可
-- 户外招牌需符合市政"reclamebeleid"（广告物设置政策），历史保护区尤其严格。
-- 露天座位（terras）需要单独的 terrasvergunning，且有面积、营业时间限制。
+## 5. Signage/outdoor seating permits
+- Outdoor signage must comply with the municipality's "reclamebeleid" (advertising/signage policy), which is especially strict in heritage-protected areas.
+- Outdoor seating (terras) requires a separate terrasvergunning, with restrictions on area and operating hours.
 
-## 6. 员工相关
-- 雇佣员工需在税务局登记为雇主（loonheffingen），按荷兰餐饮行业 CAO（集体劳动协议）支付最低工资和加班费。
-- 非欧盟员工需要工作许可（TWV）或高技术移民等身份，纯粹用旅游签证亲友帮工是违法用工，一经查实罚款很重。
-- **2026 年现实情况**：招工难是荷兰华人餐饮业目前最普遍反映的经营瓶颈之一（不只是许可问题，是真实的人力市场紧张），部分餐厅因为招不到人被迫每周休息一天、或新分店无法如期开业，筹备阶段应把"能不能招到人"作为独立的可行性评估项，而不只是走完法律手续就够了。
+## 6. Staff-related requirements
+- Hiring staff requires registering as an employer for payroll tax (loonheffingen) with the tax authority, and paying minimum wage and overtime per the Dutch hospitality industry's CAO (collective labor agreement).
+- Non-EU staff need a work permit (TWV) or a status such as a highly skilled migrant — having friends/family "help out" on a tourist visa is illegal employment and carries heavy fines if discovered.
+- **2026 reality**: hiring difficulty is currently one of the most widely reported operational bottlenecks for Chinese restaurants in the Netherlands (not just a permit issue, but a genuinely tight labor market) — some restaurants have been forced to close one day a week due to understaffing, or have been unable to open new branches on schedule. During planning, "can we actually hire people" should be treated as an independent feasibility criterion, not just a box to check after handling the legal formalities.
 
-## 信息来源
-- Gemeente Amsterdam / Helmond / Hilversum 官网《Alcoholwetvergunning aanvragen》（2026 年费用数据）
-- NVWA 官网《HACCP》《Voedselveiligheid in horeca, ambacht en retail》
-- SHO Horeca《NVWA-registratie horeca verplicht via MijnNVWA》
-- Afzuigmotoren.nl《Activiteitenbesluit horeca》、To Amuse《Horeca afzuiging》
-- 中荷商报 China Times《荷兰中餐厅现状》（真实经营者访谈，2026 年）
+## Sources
+- Gemeente Amsterdam / Helmond / Hilversum official sites, "Alcoholwetvergunning aanvragen" (2026 fee data)
+- NVWA official site, "HACCP" and "Voedselveiligheid in horeca, ambacht en retail"
+- SHO Horeca, "NVWA-registratie horeca verplicht via MijnNVWA"
+- Afzuigmotoren.nl, "Activiteitenbesluit horeca"; To Amuse, "Horeca afzuiging"
+- China Times NL, "The Real State of Dutch Chinese Restaurants" (interviews with real operators, 2026)
 
-*提示：许可费用和法规名称随年份变化（如本文所示 Drank- en Horecawet 已更名 Alcoholwet），正式申请前请以市政/NVWA 官网当年公布信息为准。*
+*Note: permit fees and regulation names change over time (as shown here, Drank- en Horecawet has been renamed Alcoholwet) — verify against the current year's information on the municipality/NVWA websites before formally applying.*

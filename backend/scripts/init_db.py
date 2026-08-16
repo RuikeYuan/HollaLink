@@ -9,7 +9,7 @@ import models  # noqa: F401  (ensures all models are registered on Base.metadata
 
 def main():
     Base.metadata.create_all(bind=engine)
-    print("数据库表已创建/确认完毕。")
+    print("Database tables created/verified.")
 
 
 if __name__ == "__main__":

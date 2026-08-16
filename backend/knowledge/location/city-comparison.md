@@ -1,28 +1,28 @@
-# 荷兰主要城市开店对比（面向中国创业者）
+# Comparison of Major Dutch Cities for Opening a Business (for international entrepreneurs)
 
-## 阿姆斯特丹（Amsterdam）
-- 优势：游客流量最大、国际化程度最高、华人及亚洲餐饮消费群体成熟（如 Zeedijk 唐人街周边）。
-- 劣势：商铺租金全国最高（核心区黄金地段月租金常在每平米 €40–€80+ 区间，具体随街道浮动巨大），竞争最激烈，市政对餐饮排烟/噪音审查趋严。
-- 适合：有一定预算（整体投资 €15 万以上）、品牌调性清晰、能承受高租金但依赖高客流/高客单的业态（连锁茶饮、精品餐饮）。
+## Amsterdam
+- Strengths: highest tourist footfall, most international, a mature Asian/Chinese dining customer base (e.g. around Zeedijk/Chinatown).
+- Weaknesses: highest commercial rents nationwide (prime locations in the city center often run €40–€80+/sqm/month, varying widely by street), the most intense competition, and municipal scrutiny of hospitality extraction/noise is getting stricter.
+- Best suited for: businesses with a reasonably large budget (total investment €150k+), a clear brand identity, and formats that can absorb high rent by relying on high foot traffic/high average spend (chain tea shops, boutique dining).
 
-## 鹿特丹（Rotterdam）
-- 优势：租金相对阿姆斯特丹更友好，港口城市国际人口多元，近年市政大力扶持新业态入驻（部分商圈有创业租金优惠）,亚裔移民和留学生基数也在增长。
-- 劣势：整体消费力/客单价不如阿姆斯特丹核心区，部分商圈仍在"更新中"，人流量对选址依赖度更高。
-- 适合：预算中等（€8-15 万）、希望性价比更高起步的餐饮/零售项目。
+## Rotterdam
+- Strengths: more rent-friendly than Amsterdam, a diverse international population as a port city, and the municipality has been actively supporting new business formats in recent years (some districts offer starter rent discounts); the Asian immigrant and international student population is also growing.
+- Weaknesses: overall spending power/average ticket size doesn't match central Amsterdam, some districts are still "up and coming," and foot traffic is more location-dependent.
+- Best suited for: mid-budget (€80k-150k) restaurant/retail projects looking for a better cost-to-value starting point.
 
-## 海牙（Den Haag）
-- 优势：政府/国际机构聚集，白领消费群体稳定，且是荷兰第三大城市，亚洲餐饮/超市有稳定的本地华人和留学生客群（莱顿大学等临近院校）。
-- 劣势：夜生活/游客经济不如阿姆斯特丹，营业时间模式需要贴合当地白领作息（午市/周末模式 vs 夜宵模式）。
-- 适合：主打工作日午市的轻餐饮、办公商圈周边奶茶/简餐。
+## Den Haag (The Hague)
+- Strengths: concentration of government/international institutions, a stable white-collar customer base, and as the Netherlands' third-largest city, Asian restaurants/supermarkets have a stable local Chinese and international-student customer base (nearby institutions like Leiden University help).
+- Weaknesses: nightlife/tourist economy is weaker than Amsterdam's, and operating hours need to match local office-worker rhythms (lunch/weekend patterns vs. late-night patterns).
+- Best suited for: light dining focused on weekday lunch service, or bubble tea/quick meals near office districts.
 
-## 乌得勒支（Utrecht）
-- 优势：地理位置荷兰中心，大学城，年轻消费群体密集，近年新兴商圈（如车站周边)发展快。
-- 劣势：市场体量小于前三者，连锁品牌竞争已经比较密集。
+## Utrecht
+- Strengths: centrally located, a university city with a dense young consumer base, and emerging districts (e.g. around the train station) have been developing quickly in recent years.
+- Weaknesses: smaller overall market size than the three cities above, and chain-brand competition is already fairly dense.
 
-## 给顾问 Agent 的选址分析框架
-回答"XX 城市 vs YY 城市"时应结构化输出：
-1. 目标客群匹配度（游客 / 留学生 / 本地白领 / 华人社区）
-2. 租金水平区间（明确说明"区间随具体街道浮动很大，需实地核价"，不要给出虚假精确数字）
-3. 同业态竞争密度
-4. 该市政对目标业态（尤其餐饮）的许可审批风格（宽松/严格）
-5. 结论：至少给出 2 个具体候选商圈方向，而非只给城市名。
+## Site-selection analysis framework for the advisor agent
+When answering "City X vs. City Y," structure the output as:
+1. Target customer fit (tourists / international students / local office workers / Chinese community)
+2. Rent range (explicitly state that "the range varies widely by specific street and needs on-the-ground verification" — don't give a false precise number)
+3. Density of competing businesses in the same format
+4. That municipality's permit-approval style for the target format (especially hospitality) — lenient vs. strict
+5. Conclusion: give at least 2 specific candidate district recommendations, not just a city name.

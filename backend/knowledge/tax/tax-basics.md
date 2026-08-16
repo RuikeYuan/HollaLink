@@ -1,27 +1,27 @@
-# 荷兰创业税务基础
+# Netherlands Startup Tax Basics
 
-## BTW（增值税）
-- 标准税率 21%（大部分零售、服务）。
-- 餐饮堂食/外卖食品、非酒精饮料适用 9% 低税率（酒精饮品仍是 21%）。
-- **2026 年 1 月 1 日起的变化**：住宿/logies（例如民宿、酒店客房）的 BTW 税率从 9% 上调到 21%，但这只影响住宿类业态，不影响普通餐饮堂食——这个变化本身说明荷兰税率会随年份调整，任何"通用税率"都要养成每年核实一次的习惯，不能凭旧数据一直沿用。
-- 每季度（部分小微企业可年度）申报 BTW，需保留全部进销项发票，逾期申报有固定罚款。
-- 小规模企业可申请 KOR（Kleineondernemersregeling，小企业免税规则）：年营业额低于 €20,000 时可选择免征 BTW，但同时不能抵扣进项税，需要结合装修/设备采购的进项税规模来判断是否划算。
+## BTW (VAT)
+- Standard rate: 21% (most retail and services).
+- Dine-in/takeaway food and non-alcoholic beverages qualify for the 9% reduced rate (alcoholic beverages remain at 21%).
+- **Change effective January 1, 2026**: the VAT rate on accommodation/logies (e.g. B&Bs, hotel rooms) rose from 9% to 21% — but this only affects accommodation businesses, not regular dine-in restaurants. This change itself is a good reminder that Dutch tax rates change year to year, and any "standard rate" figure should be re-verified annually rather than relied on from old data.
+- VAT is filed quarterly (some small businesses may file annually); all purchase/sales invoices must be retained, and late filing incurs a fixed penalty.
+- Small businesses can apply for the KOR (Kleineondernemersregeling, small business scheme): if annual turnover is under €20,000, you can opt out of charging VAT — but you also then can't deduct input VAT, so whether this is worthwhile depends on the scale of input VAT from renovation/equipment purchases.
 
-## 所得税 / 企业所得税
-- **Eenmanszaak / VOF**：利润计入经营者个人所得税（Box 1），税率是累进制（2026 年区间大致为约 36.97%–49.5%，具体数字每年调整，务必以税务局当年公告为准），但个体经营者可享受"zelfstandigenaftrek（自雇减免）"和"startersaftrek（创业者减免）"等税基抵扣，前三年优惠力度较大。
-- **BV**：公司层面缴纳企业所得税（Vpb），阶梯税率对低利润部分更友好，超过一定利润门槛后税率提高；股东从 BV 分红另需缴纳 Box 2 税。设立 BV 需要公证处出具章程，**公证费一般在 €700–€1,710 之间**（2026 年市场价，因公证处和公司结构复杂度浮动），加上 KVK 登记费 €85.15，是否选择 BV 通常在预计年利润达到一定规模、或需要引入合伙股东/风险隔离时更划算，具体门槛应结合当年税率让持牌会计（boekhouder/accountant）测算，不能凭经验数字直接套用。
+## Income tax / corporate income tax
+- **Eenmanszaak / VOF**: profit is taxed as the owner's personal income (Box 1) at progressive rates (roughly 36.97%–49.5% for 2026, though the exact figures are adjusted annually — always verify against the tax authority's current-year announcement). Sole proprietors can benefit from deductions such as "zelfstandigenaftrek" (self-employed deduction) and "startersaftrek" (starter deduction), which are more generous in the first three years.
+- **BV**: the company pays corporate income tax (Vpb) at the entity level, with a tiered rate that's more favorable on lower profit bands and rises above a certain threshold; dividends paid to shareholders are separately subject to Box 2 tax. Forming a BV requires articles of association executed by a notary, with **notary fees generally between €700–€1,710** (2026 market rates, varying by notary and company structure complexity), plus the €85.15 KVK registration fee. Whether a BV makes sense usually depends on reaching a certain expected annual profit level, or needing to bring in partner-shareholders or liability separation — the specific threshold should be calculated with a licensed accountant (boekhouder/accountant) using current-year rates, not a rule-of-thumb figure.
 
-## 雇主相关税费（如果雇人）
-- 需缴纳雇主社保分摊部分（工伤保险 WGA/ZW、失业保险 WW 等），实际雇佣一名员工的"全成本"通常显著高于税前工资本身（经验法则：总雇佣成本 ≈ 工资 × 1.2–1.3，具体比例随行业 CAO 和员工年龄浮动，务必让本地薪酬服务商核算，不要只用毛工资做预算）。
+## Employer-related taxes (if hiring staff)
+- Employer social-contribution obligations apply (occupational disability insurance WGA/ZW, unemployment insurance WW, etc.) — the "fully loaded cost" of employing one staff member is typically significantly higher than the gross wage itself (rule of thumb: total employment cost ≈ wage × 1.2–1.3, though the exact ratio varies by industry CAO and employee age — have a local payroll provider calculate this rather than budgeting off gross wage alone).
 
-## 给创业者的实用建议
-1. 从第一天起就雇佣一名本地持牌会计（boekhouder），荷兰税务申报和很多免税规则设计复杂，中国创业者自行操作出错率高。
-2. 保留所有装修、设备发票原件，进项税抵扣对现金流影响很大。
-3. 关注每年 Prinsjesdag（税务预算日，通常 9 月第三个周二）公布的次年税率变化。
+## Practical advice for entrepreneurs
+1. Hire a local licensed accountant (boekhouder) from day one — Dutch tax filing and many of the exemption rules are complex, and international entrepreneurs handling it themselves have a high error rate.
+2. Keep all original renovation and equipment invoices — input VAT deduction has a significant impact on cash flow.
+3. Watch for the following year's tax rate changes announced each year on Prinsjesdag (Budget Day, typically the third Tuesday of September).
 
-## 信息来源
-- Belastingdienst 官网《Vanaf 1 januari 2026: btw-tarief logies omhoog naar 21%》
-- MKB Servicedesk《Btw-tarieven Nederland 2026》
-- 荷兰公证费用比价网站《Kosten BV oprichten》（2026 年数据）
+## Sources
+- Belastingdienst official site, "Vanaf 1 januari 2026: btw-tarief logies omhoog naar 21%"
+- MKB Servicedesk, "Btw-tarieven Nederland 2026"
+- Dutch notary fee comparison site, "Kosten BV oprichten" (2026 data)
 
-*提示：以上税率/额度为通用性说明，具体数值随年份变化，正式决策前请以 Belastingdienst 官网当年发布数据或持牌会计确认为准。*
+*Note: the rates/thresholds above are general guidance; exact figures change year to year — verify against the Belastingdienst's current-year published data or a licensed accountant before making a final decision.*

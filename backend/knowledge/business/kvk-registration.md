@@ -1,27 +1,27 @@
-# 荷兰公司注册（KVK）基础
+# Netherlands Company Registration (KVK) Basics
 
-## 谁需要注册
-在荷兰以营利为目的、持续性地提供商品或服务，就需要在荷兰商会（Kamer van Koophandel，简称 KVK）登记，并获得一个 KVK 号码（8 位数字）。KVK 号码会同步共享给荷兰税务局（Belastingdienst），税务局会在登记后约 2 周内另外分配 BTW（增值税）号码。
+## Who needs to register
+Anyone providing goods or services in the Netherlands on a for-profit, ongoing basis must register with the Dutch Chamber of Commerce (Kamer van Koophandel, "KVK") and obtain a KVK number (8 digits). The KVK number is automatically shared with the Dutch Tax Authority (Belastingdienst), which separately assigns a BTW (VAT) number roughly 2 weeks after registration.
 
-## 常见公司形式与费用（2026 年数据）
-- **Eenmanszaak（个体经营者）**：单人所有，注册简单、成本低，但个人对公司债务承担无限责任（债权人有权追索个人财产）。KVK 登记费为一次性 **€85.15**，无年费。
-- **VOF（普通合伙）**：两人以上合伙经营，全体合伙人对公司债务承担无限连带责任，需要合伙协议。
-- **BV（有限责任公司）**：类似有限公司，公司本身具有法人资格，股东/董事的个人财产原则上与公司债务隔离。设立 BV 必须经**公证处（notaris）**签署公司章程，**公证费一般在 €700–€1,710 之间**（因公证处和公司结构复杂度浮动），另加 KVK 登记费 €85.15。BV 相比 Eenmanszaak/VOF 有更高的年度合规负担（需每年编制并存档年度财务报表）。
+## Common legal forms and fees (2026 data)
+- **Eenmanszaak (sole proprietorship)**: Single owner, simple and cheap to register, but the owner has unlimited personal liability for business debts (creditors can pursue personal assets). KVK registration fee is a one-time **€85.15**, no annual fee.
+- **VOF (general partnership)**: Two or more partners operating jointly; all partners have unlimited, joint-and-several liability for business debts, and a partnership agreement is required.
+- **BV (private limited company)**: Similar to a limited company — the company itself has legal personality, and shareholders'/directors' personal assets are in principle separated from company debts. Setting up a BV requires the articles of association to be executed before a **notary (notaris)**, with **notary fees generally between €700–€1,710** (varies by notary and company structure complexity), plus the €85.15 KVK registration fee. A BV carries a higher annual compliance burden than an Eenmanszaak/VOF (annual financial statements must be prepared and filed).
 
-## 非荷兰居民/外国人注册的关键流程
-1. 非荷兰籍人士注册前，需要先在 **RNI（Registratie Niet-Ingezetenen，非居民登记系统）** 完成登记，登记后会自动获得一个 **BSN（公民服务号码）**。
-2. 拿到 BSN 后才能申请 DigiD（荷兰数字身份认证），DigiD 是在线完成 KVK 登记表格的前提。
-3. 完成在线表格后，仍需要**预约 KVK 线下网点**现场核验完成登记——这不是一个纯远程流程。
-4. **重要区别**：以上是"如何在系统里完成登记"的技术流程，跟"是否有合法身份长期在荷兰经营"是两件事。非欧盟公民如果打算实际驻店经营（而非比利时/德国式的跨境通勤业务），通常还需要具备允许自雇的荷兰居留身份（如自雇创业者签证），仅有 RNI/BSN 不代表可以合法长期在荷兰经营实体门店，具体见 [[immigration/startup-visa-routes.md|创业签证路径]]。
+## Key process for non-Dutch residents/foreign nationals
+1. Non-Dutch nationals must first register with **RNI (Registratie Niet-Ingezetenen, the non-resident registration system)** before registering the company; this automatically issues a **BSN (citizen service number)**.
+2. Only after obtaining a BSN can you apply for DigiD (the Dutch digital identity), which is a prerequisite for completing the online KVK registration form.
+3. Even after completing the online form, you still need to **book an in-person appointment at a KVK office** for identity verification to finalize registration — this is not a purely remote process.
+4. **Important distinction**: the above is the technical process of "how to complete registration in the system," which is a separate matter from "whether you have legal status to operate a business in the Netherlands long-term." Non-EU citizens who intend to actually run a physical, staffed location (as opposed to a cross-border commuting business style common with Belgium/Germany) generally also need a Dutch residence status that permits self-employment (e.g. a self-employed/entrepreneur visa). Having only an RNI/BSN does not mean you may legally operate a physical store in the Netherlands long-term — see [[immigration/startup-visa-routes.md|startup visa routes]].
 
-## 常见误区
-- "有 KVK 号码 = 可以营业"是错误认知：食品/餐饮类还需另申请食品安全登记、环境许可、噪音/排烟许可等，见 [[horeca/horeca-licenses.md|餐饮许可清单]]。
-- 很多中国创业者忽略"营业地址与实际用途（bestemmingsplan）是否匹配"，导致注册后被市政要求停业整改，见 [[business/zoning-bestemmingsplan.md|商业用途与土地规划]]。
-- KVK 登记表格能在线填写，不代表整个流程无需到访荷兰——现场核验环节通常仍需本人或代理人到场。
+## Common misconceptions
+- "Having a KVK number = allowed to trade" is incorrect: food/hospitality businesses also need separate food safety registration, environmental permits, noise/extraction permits, etc. — see [[horeca/horeca-licenses.md|hospitality permit checklist]].
+- Many entrepreneurs overlook whether the "business address's designated use matches the actual business (bestemmingsplan)," which can result in the municipality ordering a shutdown/remediation after registration — see [[business/zoning-bestemmingsplan.md|zoning and business use]].
+- Being able to fill out the KVK form online doesn't mean the whole process needs no visit to the Netherlands — the in-person verification step generally still requires the applicant or a representative to attend.
 
-## 信息来源
-- KVK 官网《Eenmanszaak inschrijven vanuit het buitenland》（kvk.nl，查询于 2026 年）
-- ZZP Kompas《KvK inschrijven kosten 2026》
-- 荷兰公证费用比价网站《Kosten BV oprichten》（2026 年数据）
+## Sources
+- KVK official site, "Eenmanszaak inschrijven vanuit het buitenland" (kvk.nl, accessed 2026)
+- ZZP Kompas, "KvK inschrijven kosten 2026"
+- Dutch notary fee comparison site, "Kosten BV oprichten" (2026 data)
 
-*提示：以上费用为 2026 年查询到的数据，荷兰政府费率每年可能调整，正式决策前请以 KVK 官网当年公布数据为准。*
+*Note: the fees above reflect data retrieved in 2026. Dutch government fees may be adjusted annually — verify against the current year's figures on the official KVK site before making a final decision.*
