@@ -1,23 +1,29 @@
-CITY_DOMAIN = {
-    "amsterdam": "amsterdam.nl",
-    "阿姆斯特丹": "amsterdam.nl",
-    "rotterdam": "rotterdam.nl",
-    "鹿特丹": "rotterdam.nl",
-    "den haag": "denhaag.nl",
-    "denhaag": "denhaag.nl",
-    "the hague": "denhaag.nl",
-    "海牙": "denhaag.nl",
-    "utrecht": "utrecht.nl",
-    "乌得勒支": "utrecht.nl",
-    "eindhoven": "eindhoven.nl",
-    "埃因霍温": "eindhoven.nl",
+# Direct links to each municipality's horeca operating-permit (exploitatievergunning) page,
+# which is also where alcohol-license (Alcoholwetvergunning) applications are handled for
+# most of these cities. Verified reachable (HTTP 200) as of 2026-08, except Amsterdam and
+# Eindhoven, which block automated requests (HTTP 403) but were confirmed via indexed search
+# results to be the correct official pages — a browser should load them fine.
+CITY_GEMEENTE_LINK = {
+    "amsterdam": "https://www.amsterdam.nl/ondernemen/horeca/horecavergunning-aanvragen/",
+    "阿姆斯特丹": "https://www.amsterdam.nl/ondernemen/horeca/horecavergunning-aanvragen/",
+    "rotterdam": "https://www.rotterdam.nl/exploitatievergunning-aanvragen",
+    "鹿特丹": "https://www.rotterdam.nl/exploitatievergunning-aanvragen",
+    "den haag": "https://www.denhaag.nl/nl/vergunningen-en-ontheffingen/exploitatievergunning-horeca-aanvragen/",
+    "denhaag": "https://www.denhaag.nl/nl/vergunningen-en-ontheffingen/exploitatievergunning-horeca-aanvragen/",
+    "the hague": "https://www.denhaag.nl/nl/vergunningen-en-ontheffingen/exploitatievergunning-horeca-aanvragen/",
+    "海牙": "https://www.denhaag.nl/nl/vergunningen-en-ontheffingen/exploitatievergunning-horeca-aanvragen/",
+    "utrecht": "https://loket.digitaal.utrecht.nl/nl/products/horecavergunning-aanvragen-of-aanpassen",
+    "乌得勒支": "https://loket.digitaal.utrecht.nl/nl/products/horecavergunning-aanvragen-of-aanpassen",
+    "eindhoven": "https://www.eindhoven.nl/ondernemen/horeca/exploitatievergunning",
+    "埃因霍温": "https://www.eindhoven.nl/ondernemen/horeca/exploitatievergunning",
 }
-DEFAULT_CITY_DOMAIN = "ondernemersplein.kvk.nl"
+# National generic page for any municipality not covered above — explains the exploitatievergunning
+# process in general terms and is a safe fallback rather than guessing a city-specific URL pattern.
+DEFAULT_GEMEENTE_LINK = "https://ondernemersplein.overheid.nl/wetten-en-regels/exploitatievergunning-horecabedrijf-aanvragen/"
 
 
 def _gemeente_link(city: str) -> str:
-    domain = CITY_DOMAIN.get(city.strip().lower(), DEFAULT_CITY_DOMAIN)
-    return f"https://www.{domain}"
+    return CITY_GEMEENTE_LINK.get(city.strip().lower(), DEFAULT_GEMEENTE_LINK)
 
 
 def generate_roadmap(
@@ -40,7 +46,7 @@ def generate_roadmap(
             "title": "Register with the KVK (Chamber of Commerce)",
             "category": "Company registration",
             "materials": "Passport/ID, proof of business address, company name, company type (BV/Eenmanszaak)",
-            "official_link": "https://www.kvk.nl/en/registration/registering-your-business/",
+            "official_link": "https://www.kvk.nl/en/registration/new-business/",
             "estimated_days": "1-2 weeks (online appointment + in-person registration)",
             "note": f"Required documents differ slightly for company type \"{company_type}\" — a BV also needs a notarial deed of incorporation",
             "priority": "high",
@@ -66,7 +72,7 @@ def generate_roadmap(
                 "title": "Food business registration (NVWA)",
                 "category": "Food safety",
                 "materials": "Floor plan of the premises, HACCP food safety plan",
-                "official_link": "https://www.nvwa.nl/onderwerpen/nieuw-bedrijf-starten",
+                "official_link": "https://www.nvwa.nl/onderwerpen/voedselveiligheid/levensmiddelen-produceren-en-verhandelen/registratie-en-erkenning/registreer-uw-levensmiddelenbedrijf",
                 "estimated_days": "2-4 weeks",
                 "note": "Must be completed before opening — trading with food without registering carries a real fine risk",
                 "priority": "high",
@@ -135,7 +141,7 @@ def generate_roadmap(
             "title": "Commercial waste collection contract",
             "category": "Operational compliance",
             "materials": "Business address",
-            "official_link": "https://ondernemersplein.kvk.nl/bedrijfsafval-regelen/",
+            "official_link": "https://ondernemersplein.kvk.nl/afvalwijzer-voor-bedrijven/",
             "estimated_days": "1 week",
             "note": "Requirements for waste collectors and sorting differ by municipality — arrange this directly with a local provider",
             "priority": "medium",
@@ -147,7 +153,7 @@ def generate_roadmap(
             "title": "Insurance (liability / property)",
             "category": "Insurance",
             "materials": "",
-            "official_link": "https://ondernemersplein.kvk.nl/verzekeringen-voor-uw-bedrijf/",
+            "official_link": "https://ondernemersplein.kvk.nl/soorten-verzekeringen/",
             "estimated_days": "1 week",
             "note": "Business liability insurance (bedrijfsaansprakelijkheidsverzekering) is recommended; if you have staff, also consider employer's liability cover",
             "priority": "medium",
