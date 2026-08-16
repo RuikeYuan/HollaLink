@@ -51,3 +51,30 @@ class RoadmapOut(BaseModel):
 class RoadmapStepUpdate(BaseModel):
     status: str | None = None
     due_date: date | None = None
+
+
+class IntakeFields(BaseModel):
+    shop_type: str | None = None
+    city: str | None = None
+    company_type: str | None = None
+    sells_food_beverage: bool | None = None
+    sells_alcohol: bool | None = None
+    has_staff: bool | None = None
+    needs_renovation: bool | None = None
+
+
+class IntakeMessage(BaseModel):
+    role: str
+    content: str
+
+
+class IntakeRequest(BaseModel):
+    message: str
+    history: list[IntakeMessage] = []
+    known_fields: IntakeFields = IntakeFields()
+
+
+class IntakeResponse(BaseModel):
+    reply: str
+    fields: IntakeFields
+    done: bool

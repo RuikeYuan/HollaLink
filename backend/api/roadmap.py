@@ -1,10 +1,19 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session, joinedload
 
+from agents.roadmap_intake import run_intake_step
 from api.deps import require_admin
 from database import get_db
+from schemas.roadmap import (
+    IntakeRequest,
+    IntakeResponse,
+    RoadmapOut,
+    RoadmapRequest,
+    RoadmapStepOut,
+    RoadmapStepUpdate,
+)
 from models.roadmap import RoadmapProfile, RoadmapStep
-from schemas.roadmap import RoadmapOut, RoadmapRequest, RoadmapStepOut, RoadmapStepUpdate
+from services.llm_client import LLMNotConfiguredError
 from services.rules_engine import generate_roadmap
 
 router = APIRouter(prefix="/api", tags=["roadmap"])
@@ -42,6 +51,22 @@ def create_roadmap(payload: RoadmapRequest, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(profile)
     return profile
+
+
+@router.post("/roadmap/intake", response_model=IntakeResponse)
+def roadmap_intake(payload: IntakeRequest):
+    if not payload.message.strip():
+        raise HTTPException(status_code=400, detail="Message content cannot be empty")
+
+    history = [{"role": m.role, "content": m.content} for m in payload.history]
+    known_fields = payload.known_fields.model_dump()
+
+    try:
+        result = run_intake_step(payload.message, history, known_fields)
+    except LLMNotConfiguredError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+    return result
 
 
 @router.get("/roadmap/{profile_id}", response_model=RoadmapOut)

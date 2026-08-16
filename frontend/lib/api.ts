@@ -206,3 +206,30 @@ export function updateRoadmapStep(stepId: string, payload: { status?: string; du
     body: JSON.stringify(payload),
   });
 }
+
+export interface IntakeFields {
+  shop_type: string | null;
+  city: string | null;
+  company_type: string | null;
+  sells_food_beverage: boolean | null;
+  sells_alcohol: boolean | null;
+  has_staff: boolean | null;
+  needs_renovation: boolean | null;
+}
+
+export interface IntakeResponse {
+  reply: string;
+  fields: IntakeFields;
+  done: boolean;
+}
+
+export function sendRoadmapIntake(payload: {
+  message: string;
+  history: { role: string; content: string }[];
+  known_fields: IntakeFields;
+}) {
+  return request<IntakeResponse>("/api/roadmap/intake", {
+    method: "POST",
+    body: JSON.stringify(payload),
+  });
+}
