@@ -36,7 +36,7 @@ class RoadmapStep(Base):
     category: Mapped[str] = mapped_column(String(100))
     materials: Mapped[str] = mapped_column(Text, default="")
     official_link: Mapped[str] = mapped_column(String(255), default="")
-    estimated_days: Mapped[str] = mapped_column(String(50), default="")
+    estimated_days: Mapped[str] = mapped_column(String(200), default="")
     note: Mapped[str] = mapped_column(Text, default="")
     priority: Mapped[str] = mapped_column(String(20), default="medium")
     status: Mapped[str] = mapped_column(String(20), default="not_started")

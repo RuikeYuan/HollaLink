@@ -37,23 +37,23 @@ def generate_roadmap(
     steps.append(
         {
             "step_key": "kvk_registration",
-            "title": "注册 KVK（商会注册）",
-            "category": "公司注册",
-            "materials": "护照/身份证件、营业地址证明、公司名称、公司类型（BV/Eenmanszaak）",
-            "official_link": "https://www.kvk.nl/inschrijven-en-wijzigen/inschrijven-handelsregister/",
-            "estimated_days": "1-2 周（线上预约 + 现场登记）",
-            "note": f"公司类型为「{company_type}」时所需材料略有不同，BV 需额外提供公证设立文书",
+            "title": "Register with the KVK (Chamber of Commerce)",
+            "category": "Company registration",
+            "materials": "Passport/ID, proof of business address, company name, company type (BV/Eenmanszaak)",
+            "official_link": "https://www.kvk.nl/en/registration/registering-your-business/",
+            "estimated_days": "1-2 weeks (online appointment + in-person registration)",
+            "note": f"Required documents differ slightly for company type \"{company_type}\" — a BV also needs a notarial deed of incorporation",
             "priority": "high",
         }
     )
     steps.append(
         {
             "step_key": "vat_registration",
-            "title": "申请 VAT 号（增值税号）",
-            "category": "税务",
-            "materials": "KVK 注册号",
-            "official_link": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/",
-            "estimated_days": "1-2 周（KVK 注册后税务局自动分配，需确认收到确认信）",
+            "title": "Apply for a VAT number",
+            "category": "Tax",
+            "materials": "KVK registration number",
+            "official_link": "https://www.belastingdienst.nl/wps/wcm/connect/en/business/business",
+            "estimated_days": "1-2 weeks (issued automatically after KVK registration — confirm you received the confirmation letter)",
             "note": "",
             "priority": "high",
         }
@@ -63,12 +63,12 @@ def generate_roadmap(
         steps.append(
             {
                 "step_key": "food_registration",
-                "title": "食品经营登记（NVWA）",
-                "category": "食品安全",
-                "materials": "经营场所平面图、HACCP 食品安全计划",
+                "title": "Food business registration (NVWA)",
+                "category": "Food safety",
+                "materials": "Floor plan of the premises, HACCP food safety plan",
                 "official_link": "https://www.nvwa.nl/onderwerpen/nieuw-bedrijf-starten",
-                "estimated_days": "2-4 周",
-                "note": "须在开业前完成登记，涉及食品的经营场所未登记即营业存在罚款风险",
+                "estimated_days": "2-4 weeks",
+                "note": "Must be completed before opening — trading with food without registering carries a real fine risk",
                 "priority": "high",
             }
         )
@@ -77,12 +77,12 @@ def generate_roadmap(
         steps.append(
             {
                 "step_key": "alcohol_license",
-                "title": "酒类经营许可证（Drank- en Horecawet vergunning）",
-                "category": "政府许可",
-                "materials": "无犯罪记录声明（VOG）、场所平面图、经营者社会行为审查资料",
+                "title": "Alcohol license (Drank- en Horecawet vergunning)",
+                "category": "Government permit",
+                "materials": "Certificate of good conduct (VOG), floor plan, background-check documents for the operator",
                 "official_link": gemeente_link,
-                "estimated_days": "4-8 周",
-                "note": "需通过 Bibob 资金来源审查，审批周期较长，建议尽早向所在市政厅提交申请",
+                "estimated_days": "4-8 weeks",
+                "note": "Subject to a Bibob screening of your funding sources — approval takes a while, so apply to your municipality early",
                 "priority": "high",
             }
         )
@@ -91,12 +91,12 @@ def generate_roadmap(
         steps.append(
             {
                 "step_key": "exploitation_permit",
-                "title": "经营许可证（Exploitatievergunning）",
-                "category": "政府许可",
-                "materials": "场所安全评估、噪音/油烟评估报告",
+                "title": "Operating permit (Exploitatievergunning)",
+                "category": "Government permit",
+                "materials": "Premises safety assessment, noise/odour (extraction) assessment report",
                 "official_link": gemeente_link,
-                "estimated_days": "4-8 周",
-                "note": "餐饮类营业场所通常需要，建议在签约装修前向市政厅确认具体要求",
+                "estimated_days": "4-8 weeks",
+                "note": "Usually required for hospitality venues — confirm the exact requirements with your municipality before signing a renovation contract",
                 "priority": "high",
             }
         )
@@ -105,12 +105,12 @@ def generate_roadmap(
         steps.append(
             {
                 "step_key": "employer_registration",
-                "title": "雇主登记（工资税 Loonheffingen）",
-                "category": "雇佣",
-                "materials": "员工劳动合同模板、payroll 系统或记账代理",
-                "official_link": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/personeel_en_loon/",
-                "estimated_days": "2-3 周",
-                "note": "需在首位员工入职前完成雇主登记并开始代扣代缴工资税",
+                "title": "Register as an employer (payroll tax / Loonheffingen)",
+                "category": "Employment",
+                "materials": "Employment contract template, payroll system or bookkeeping service",
+                "official_link": "https://www.belastingdienst.nl/wps/wcm/connect/en/business/business",
+                "estimated_days": "2-3 weeks",
+                "note": "Must be completed before your first employee starts, so you can withhold and remit payroll tax from day one",
                 "priority": "high",
             }
         )
@@ -119,12 +119,12 @@ def generate_roadmap(
         steps.append(
             {
                 "step_key": "building_permit",
-                "title": "建筑/装修许可证（Omgevingsvergunning）",
-                "category": "建筑合规",
-                "materials": "装修设计图纸、结构评估（如涉及承重改动）",
+                "title": "Building/renovation permit (Omgevingsvergunning)",
+                "category": "Building compliance",
+                "materials": "Renovation design drawings, structural assessment (if load-bearing changes are involved)",
                 "official_link": "https://www.omgevingsloket.nl/",
-                "estimated_days": "4-8 周（部分简单装修可走快速通道）",
-                "note": "涉及外观、结构或用途变更的装修通常需要审批，未批先装可能面临强制恢复原状",
+                "estimated_days": "4-8 weeks (some minor renovations qualify for a fast-track process)",
+                "note": "Changes to the facade, structure, or intended use generally require approval — renovating without one can force you to undo the work",
                 "priority": "high",
             }
         )
@@ -132,24 +132,24 @@ def generate_roadmap(
     steps.append(
         {
             "step_key": "waste_contract",
-            "title": "商业垃圾处理合同",
-            "category": "运营合规",
-            "materials": "营业地址",
+            "title": "Commercial waste collection contract",
+            "category": "Operational compliance",
+            "materials": "Business address",
             "official_link": "https://ondernemersplein.kvk.nl/bedrijfsafval-regelen/",
-            "estimated_days": "1 周",
-            "note": "各市政厅对商业垃圾处理商和分类要求不同，需与当地服务商单独签约",
+            "estimated_days": "1 week",
+            "note": "Requirements for waste collectors and sorting differ by municipality — arrange this directly with a local provider",
             "priority": "medium",
         }
     )
     steps.append(
         {
             "step_key": "liability_insurance",
-            "title": "保险建议（责任险/财产险）",
-            "category": "保险",
+            "title": "Insurance (liability / property)",
+            "category": "Insurance",
             "materials": "",
             "official_link": "https://ondernemersplein.kvk.nl/verzekeringen-voor-uw-bedrijf/",
-            "estimated_days": "1 周",
-            "note": "建议投保企业责任险（bedrijfsaansprakelijkheidsverzekering），有员工时另需考虑雇主责任险",
+            "estimated_days": "1 week",
+            "note": "Business liability insurance (bedrijfsaansprakelijkheidsverzekering) is recommended; if you have staff, also consider employer's liability cover",
             "priority": "medium",
         }
     )
